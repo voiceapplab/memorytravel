@@ -1,0 +1,18 @@
+{
+  "name": "memory_travel",
+  "description": "Memory Travel Cloud Functions for Firebase",
+  "author": "Daisuke Ikeda",
+  "scripts": {
+    "start": "firebase serve --only functions:dialogflowFirebaseFulfillment",
+    "deploy": "firebase deploy --only functions:dialogflowFirebaseFulfillment"
+  },
+  "dependencies": {
+    "actions-on-google": "^2.3.0",
+    "cheerio-httpcli": "^0.7.3",
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.0.3",
+    "request": "^2.88.0",
+    "ssml-builder": "^0.4.3"
+  },
+  "private": true
+}
