@@ -24,6 +24,8 @@
 * Wikipedia
 * Japan Meteorological Agency
 
+## Deploy
+    $ firebase deploy --only functions:DialogflowFirebaseFulfillmentV2
 
 ## Author
 * VoiceApp Lab (Toru Kobayashi, Daisuke Ikeda, Ryuji Sasage)

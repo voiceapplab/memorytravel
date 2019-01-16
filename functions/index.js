@@ -57,7 +57,7 @@ function welcome(conv){
     }
     conv.user.storage.lastDate = currentDate;
 
-    let text = "";
+    let text = "(この「記憶の旅」は音声アプリです。音声の応答でお楽しみください。)\n\n\n\n";
 
     //時差が30分(0.5)以上あればオープニングを流す
     if(diff > 0.5){
@@ -77,8 +77,8 @@ function welcome(conv){
             speech: speech.ssml().replace(/<break time='(\d+)ms'\/>/g,'<s><break time=\'$1ms\'/></s>'),
             text: text,
         }));
-        conv.ask(new Suggestions('60歳'));
-        conv.ask(new Suggestions('70歳'));
+        // conv.ask(new Suggestions('60歳'));
+        // conv.ask(new Suggestions('70歳'));
     }else{
         let speech = new Speech();
         text += "お帰りなさい。またお目にかかれて嬉しいです。";
@@ -148,8 +148,8 @@ app.intent('setRightAgeAgain',(conv) =>{
         speech: speech.ssml().replace(/<break time='(\d+)ms'\/>/g,'<s><break time=\'$1ms\'/></s>'),
         text: text,
     }));
-    conv.ask(new Suggestions('60歳'));
-    conv.ask(new Suggestions('70歳'));
+    // conv.ask(new Suggestions('60歳'));
+    // conv.ask(new Suggestions('70歳'));
 });
 
 app.intent('completeSetAge',(conv)=>{
@@ -168,9 +168,9 @@ app.intent('completeSetAge',(conv)=>{
         speech: speech.ssml().replace(/<break time='(\d+)ms'\/>/g,'<s><break time=\'$1ms\'/></s>'),
         text: text,
     })); 
-    conv.ask(new Suggestions('1980年'));
-    conv.ask(new Suggestions('昭和45年'));
-    conv.ask(new Suggestions('40年前'));
+    // conv.ask(new Suggestions('1980年'));
+    // conv.ask(new Suggestions('昭和45年'));
+    // conv.ask(new Suggestions('40年前'));
 });
 
 
@@ -426,8 +426,8 @@ app.intent('travel',(conv) =>{
                 speech: speech.ssml().replace(/<break time='(\d+)ms'\/>/g,'<s><break time=\'$1ms\'/></s>'),
                 text: text,
             }));
-            conv.ask(new Suggestions('1月'));
-            conv.ask(new Suggestions('聞かない'));
+            // conv.ask(new Suggestions('1月'));
+            // conv.ask(new Suggestions('聞かない'));
             resolve();
         }).catch(function(){
             let speech = new Speech();
@@ -437,8 +437,8 @@ app.intent('travel',(conv) =>{
                 speech: speech.ssml().replace(/<break time='(\d+)ms'\/>/g,'<s><break time=\'$1ms\'/></s>'),
                 text: text,
             }));
-            conv.ask(new Suggestions('1月'));
-            conv.ask(new Suggestions('聞かない'));
+            // conv.ask(new Suggestions('1月'));
+            // conv.ask(new Suggestions('聞かない'));
             resolve();
         });
     });
@@ -455,9 +455,9 @@ app.intent('pauseTravel',(conv) =>{
         speech: speech.ssml(),
         text: text,
     })); 
-    conv.ask(new Suggestions('1950年'));
-    conv.ask(new Suggestions('昭和45年'));
-    conv.ask(new Suggestions('終わり'));
+    // conv.ask(new Suggestions('1950年'));
+    // conv.ask(new Suggestions('昭和45年'));
+    // conv.ask(new Suggestions('終わり'));
 });
 
 app.intent('closeTravel',(conv) => {
